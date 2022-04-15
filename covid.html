@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/covid.js"></script>
+
+
+    <title>Covid-19</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="contenedor">
+                <li>
+                    <a href="index.html" class="icono">
+                        <i class="fab fa-medrt"></i>
+                        <h1>Medical</h1>
+                    </a>
+                </li>
+
+                <li class="buscador">
+                    <input placeholder="Buscador de enfermedades" list="lista-enfermedades" name="enfermedad"
+                        id="enfermedad">
+                    <datalist id="lista-enfermedades">
+                        <option value="COVID-19">
+                        <option value="SIDA">
+                        <option value="VARICELA">
+                        <option value="HEPATITIS">
+                        <option value="GRIPE ESTACIONAL">
+                    </datalist>
+                    <label for="enfermedad"><i class="fas fa-search"></i></label>
+                </li>
+                <li class="redes">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook uno"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square dos"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram tres"></i></a>
+                </li>
+            </ul>
+            <div class="barra-inferior-nav">
+                <ul class="barra-inferior">
+                    <li><a href="index.html"> HOME</a></li>
+                    <li><a href="enfermedades.html"> ENFERMEDADES</a></li>
+                    <li><a href="vacuna.html"> VACUNACION</a></li>
+                    <li><a href="mapa-hospital.html"> HOSPITALES</a></li>
+                    <li><a href="contacto.html"> CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+        <a class="desplegable"></a>
+    </header>
+    <main class="contenedor-main">
+        <h2 class="titulares contenido-principal">COVID-19</h2>
+        <section>
+            <article class="descipcion-covid">
+                <img src="img/imagen-covid.jpg" alt="imagen-covid">
+                <p>El virus que causa la COVID‑19 se transmite principalmente a través de las gotículas generadas cuando
+                    una persona infectada tose, estornuda o espira. Estas gotículas son demasiado pesadas para
+                    permanecer suspendidas en el aire y caen rápidamente sobre el suelo o las superficies.</br>
+                    </br> Usted puede infectarse al inhalar el virus si está cerca de una persona con COVID‑19 o si,
+                    tras tocar una superficie contaminada, se toca los ojos, la nariz o la boca.</p>
+            </article>
+        </section>
+        <section class="covid-formulario">
+            <h3>Formulario de deteccion (test) de covid-19</h3>
+            <div class="formulario">
+                <article class="descripcion-formulario">
+                    <p>Si tienes síntomas de COVID-19 o has estado en
+                        contacto con una persona afectada deberías hacer un control y seguimiento
+                        diario de tus síntomas.
+                        <br><br> Esta aplicación te permitirá hacer un seguimiento de la evolución de los
+                        síntomas y te dará las indicaciones y consejos a seguir en cada caso.
+                        El uso de este servicio supone la aceptación de los términos y la política de
+                        privacidad descritos en 'Ver las condiciones y políticas'”</p>
+                    <h4>SINTOMAS</h4>
+                    <div class="imagenes-sintomas">
+                        <div class="imagenes-sintomas-superior">
+                            <img src="img/23-fiebre-tos.png" alt="imagen-tos">
+                            <img src="img/24-fiebre-dolor-garganta.png" alt="imagen-dolorgarganta">
+                        </div>
+                        <div class="imagenes-sintomas-inferior">
+                            <img src="img/25-fiebre-dificultad-respirar.png" alt="imagen-dificultadpararespirar">
+                        </div>
+                    </div>
+                </article>
+                <article class="formulario-covid">
+                    <form action="#" onsubmit="return validar()">
+                        <label for="nombre">Nombre y Apellido</label><br>
+                        <input type="text" id="nombre"  name="nombre" class="input-nombre formulario-input"
+                            placeholder="Ingresa tu nombre y apellido"><br>
+                        <div class="dni-telefono">
+                            <div class="dni">
+                                <label for="dni">Dni</label>
+                                <input type="number" id="dni" placeholder="Ingresa tu dni" class="formulario-input">
+                            </div>
+                            <div class="telefono">
+                                <label for="telefono">Telefono</label>
+                                <input type="tel" id="telefono" placeholder="Ingresa tu telefono"
+                                    class="formulario-input">
+                            </div>
+                        </div>
+                        <div class="ciudad-sexo">
+                            <div class="ciudad">
+                                <label for="ciudad">Ciudad</label>
+                                <input type="text" id="ciudad" placeholder="Ingresa tu ciudad" class="formulario-input">
+                            </div>
+                            <div class="sexo">
+                                <label for="sexo">Sexo</label>
+                                <div class="selectores-sexo">
+                                    <label for="sexo">F</label>
+                                    <input type="radio" name="sexo" id="femenino">
+                                    <label for="sexo">M</label>
+                                    <input type="radio" name="sexo" id="masculino">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pais-visitados">
+                            <div class="has-viajado">
+                                <label for="viajo">¿Has viajado al exterior de la República Argentina?</label><br>
+                                <label for="si">SI</label>
+                                <input type="radio" id="si viaje" name="viajo" value="si" onchange="cambiar('viajo', 'paises')">
+                                <label for="no">NO</label>
+                                <input type="radio" id="no viaje" name="viajo" value="no" onchange="cambiar('viajo', 'paises')">
+                            </div>
+                            <div class="selector-pais">
+                                <label for="paises">Países Visitados:</label>
+                                <select id="paises">
+                                    <option value="brasil" disabled selected>selecionar opcion</option>
+                                    <option value="brasil">brasil</option>
+                                    <option value="uruguay">uruguay</option>
+                                    <option value="chile">chile</option>
+                                    <option value="paraguay">paraguay</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sintomas">
+                            <label for="indicar"> Por favor, indica los síntomas que presentas:</label><br>
+                            <div class="cuestionario">
+                                <div class="preguntas">
+                                    <label for="fiebre">¿Tuviste Fiebre mayor a 38 grados?</label>
+                                    <label for="cabeza">¿Tuviste Dolor de cabeza?</label>
+                                    <label for="tos">¿Tuviste una tos persistente?</label>
+                                    <label for="garganta">Tuviste Dolor de garganta?</label>
+                                    <label for="respirar">¿Tuviste Dificultad para respirar?</label>
+                                    <div class="direccion" id="direccion">
+                                                <label for="direccion" >direccion: </label>
+                                                <input type="text"  placeholder="Ingresa tu direccion" class="formulario-input">
+                                    </div>
+                                </div>
+                                <div class="respuestas">
+                                    <div class="flex">
+                                        <input type="radio" id="mayor" value="si" name="fiebre">
+                                        <label for="si" class="espacio">SI</label>
+                                        <input type="radio" id="menor" value="no" name="fiebre">
+                                        <label for="no">No</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="radio" id="si tuve" value="si" name="cabeza">
+                                        <label for="si" class="espacio">SI</label>
+                                        <input type="radio" id="no tuve" value="no" name="cabeza">
+                                        <label for="no">No</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="radio" id="tos" value="si" name="tos">
+                                        <label for="si" class="espacio">SI</label>
+                                        <input type="radio" id="no tos" value="no" name="tos">
+                                        <label for="no">No</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="radio" id="dolor" value="si" name="garganta">
+                                        <label for="si" class="espacio">SI</label>
+                                        <input type="radio" id="sin dolor" value="no" name="garganta">
+                                        <label for="no">No</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="radio" id="con dificultad" value="si" name="respirar" value="si" onchange="cambiar('respirar', 'direccion')">
+                                        <label for="si" class="espacio">SI</label>
+                                        <input type="radio" id="sin" value="no" name="respirar" value="no" onchange="cambiar('respirar', 'direccion')">
+                                        <label for="no">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boton-formulario">
+                            <input type="submit" class="btn" value="Enviar test">
+                        </div>
+                         <div id="mensaje" class="error"> </div>
+                    </form>
+                </article>
+            </div>
+        </section>
+        <section class="medidas-precaucion">
+            <h3>Medidas de Precaucion</h3>
+            <article class="imagenes-precaucion">
+                <div class="imagenes">
+                    <img src="img/14-lavarse-manos.png" alt="lavarse-manos">
+                    <img src="img/15-estornudar.png" alt="estornudar">
+                    <img src="img/16-tocar-nariz.png" alt="tocar-nariz">
+                    <img src="img/17-ventilar.png" alt="ventillar">
+                </div>
+                <div class="imagenes">
+                    <img src="img/18-limpiar-objetos.png" alt="limpiar-objetos">
+                    <img src="img/19-permanecer-domicilio.png" alt="permanecer-domicilio">
+                    <img src="img/20-reducir-contacto.png" alt="reducir-contacto">
+                    <img src="img/21-no-compartir-mate.png" alt="no-compartir-mate">
+                </div>
+            </article>
+        </section>
+        <aside class="hospital-mas-cercano">
+            <h3>Hospital mas cercano especializado en la enfermedad</h3>
+            <div class="info-hospital">
+                <div class="informacion-hospital">
+                    <H4>HOSPITAL POSADAS</H4>
+                    <P>TEL: 4469-9300</P>
+                    <P>DIRECCIÓN: Avenida Presidente Arturo U. Illia 386</P>
+                    <P>CIUDAD: Provincia de Buenos Aires</P>
+                    <img src="img/hospital-posadas.jfif" alt="foto-hospital">
+                </div>
+                <div class="mapa-hospital">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13131.87148464452!2d-58.5753246!3d-34.6302522!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xef2dc611cc3efabb!2sPosadas!5e0!3m2!1ses-419!2sar!4v1602593224267!5m2!1ses-419!2sar"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="integrantes">
+            <h3>Datos del Grupo</h3>
+            <p>Charlin Ignacio - 39207534</p>
+            <p>Figueredo Agustin - 36797436</p>
+            <p>Perri Mariano  - 33698585</p>
+        </div>
+        <div class="menu-inferior">
+            <h3>Menu Inferior</h3>
+            <a href="enfermedades.html" >Enfermedades</a>
+            <a href="vacuna.html" >Vacunas</a>
+            <a href="mapa-hospital.html" >Hospitales</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="redes-sociales">
+            <h3>Redes Sociales</h3>
+            <div class="logo-redes">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook uno"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square dos"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram tres"></i></a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
